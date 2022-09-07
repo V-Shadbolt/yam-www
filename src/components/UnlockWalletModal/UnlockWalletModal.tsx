@@ -27,6 +27,7 @@ const UnlockWalletModal: React.FC<ModalProps> = ({ isOpen, onDismiss }) => {
           udConnector.walletConnectProvider = undefined
         }
         await activate(udConnector)
+        udAccount = true;
         localStorage.setItem("walletProvider", connectorId);
       } catch (error) { 
         console.error(error)
